@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
         internal var messengerTextView = itemView.findViewById(R.id.messengerTextView) as TextView
         internal var messengerImageView = itemView.findViewById(R.id.messengerImageView) as CircleImageView
     }
+
     companion object {
         const val TAG = "MainActivity"
         const val ANONYMOUS = "anonymous"
@@ -198,6 +199,7 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
                 .push().setValue(friendlyMessage)
             mMessageEditText.setText("")
         }
+        // Helpers.hideSoftKeyboard(this)
 
         mAddMessageImageView = findViewById(R.id.addMessageImageView)
         mAddMessageImageView.setOnClickListener {
